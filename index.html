@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+
+     /* Colors */
+     --cream-:hsl(30, 38%, 92%);
+     --dark-cyan-:hsl(158, 36%, 37%);
+     --very-dark-blue-:hsl(212, 21%, 14%);
+     --dark-grayish-blue-:hsl(228, 12%, 48%);
+     --white-:hsl(0, 0%, 100%);
+      --monts-font-: 'Montserrat', sans-serif;
+      --fraunces-font-: 'Fraunces', sans-serif;
+    }
+    body {
+
+      background-color: var(--cream-);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .container {
+
+      max-width: 20rem;
+      background-color: var(--white-);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      /*padding: 1.2rem;*/
+      border-radius: 1rem;
+      margin-top: 2rem;
+      
+    }
+    .container .perfume-pic {
+      max-width: 100%;
+      
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+    .sidebar {
+      
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+     
+    }
+    .perfume-text-container {
+      
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+     
+    }
+    .main-body-text {
+      font-family: var(--monts-font-);
+      font-size: 0.85rem;
+      color: var(--dark-grayish-blue-);
+      line-height: 1.5;
+    }
+    #perfume {
+
+      letter-spacing: 5px;
+      font-size: 12px;
+    }
+    .bold-text-container {
+    
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
+    .bold-text {
+
+      font-family: var(--fraunces-font-);
+      line-height: 1;
+      font-size: 2rem;
+    }
+    .product-info-container {
+  
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
+    .price-container {
+     
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+
+    }
+    .price-0 {
+      font-family: var(--fraunces-font-);
+      color: var(--dark-cyan-);
+      font-size: 25px;
+    }
+    .price-1 {
+      font-family: var(--monts-font-);
+      font-size: 10px;
+    }
+    .button-container {
+   
+      display: flex;
+      min-height: 2.5rem;
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .cart {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--dark-cyan-);
+      border-radius: 0.5rem;
+      border: none;
+    }
+    .cart-text {
+      color: var(--white-);
+    }
+    .attribution { font-size: 11px; text-align: center; margin-top: 3rem; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (min-width: 375px) {
+
+
+      .container {
+
+          max-width: 35rem;
+          background-color: var(--white-);
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+      
+          border-radius: 1rem;
+          margin-top: 15rem;
+
+      }
+      .container .perfume-pic {
+        min-height: 100%;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        bot
+      }
+      .sidebar {
+        padding-top: 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+    
+    <div class="container">
+
+      <section class="image-container">
+      <img src="images/image-product-mobile.jpg" alt="" class="perfume-pic">
+      </section>
+      
+      <section class="sidebar">
+      <div class="perfume-text-container">
+        <p class="main-body-text" id="perfume">PERFUME</p>
+      </div>
+      <div class="bold-text-container">
+        <h1 class="bold-text">Gabrielle Essence Eau De Parfum</h1>
+      </div>
+      <div class="product-info-container">
+        <p class="main-body-text">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+      </div>
+      <div class="price-container">
+        <p class="price-0">$149.99</p>
+        <s class="price-1">$169.99</s>
+      </div>
+      <div class="button-container">
+        <button class="cart">
+          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+          <p class="cart-text">Add to Cart</p>
+        </button>
+      </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hunter Mann</a>.
+  </div>
+  </footer>
+
+
+
+
+</body>
+</html>
+
+
+<!--
+Perfume
+
+  Gabrielle Essence Eau De Parfum
+
+  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.
+
+  $149.99
+  $169.99
+
+  Add to Cart
+-->
